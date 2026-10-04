@@ -1,4 +1,4 @@
-"""Вспомогательные функции для безопасного ввода данных."""
+# Вспомогательные функции для безопасного ввода данных.
 from datetime import date, datetime
 
 
@@ -7,10 +7,10 @@ def input_int(prompt: str) -> int:
 
     При некорректном вводе запрос повторяется.
     """
-    while True:
+    while True: # бесконечный цикл, пока не получится число
         try:
-            return int(input(prompt))
-        except ValueError:
+            return int(input(prompt)) # попытка преобразования ввода в int
+        except ValueError: # обработка ошибки, если не получилось
             print("Ошибка: введите целое число.")
 
 
